@@ -1,0 +1,704 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    display: relative;
+}
+:root{
+    --light:white;
+    --dark:black;
+    --gray:#e5e4e4;
+    --orange: orange;
+    --SectionGray : #dddbdb;
+    --sectionWhite:#fff;
+    --blue:rgba(0, 69, 255, 0.7);
+    --red:rgba(252, 61, 61, 0.2);
+    --green:rgba(137, 253, 94, 0.2);
+    --yellow:rgba(207, 252, 58, 0.2);
+    --pink:rgba(188, 65, 226, 0.35);
+}
+#partOne{
+    display: flex;
+    height: 100vh;
+    width: auto;
+    background: url(images/background1.jpg)center/cover no-repeat fixed;
+}
+#logo{
+    width: 100px;
+    height: 50px;
+    margin: 0 1rem ;
+}
+nav{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background:linear-gradient(rgba(0, 108, 255, 0.6),rgba(0, 108, 255, 0.6));
+    z-index: 3;
+}
+.container{
+    display:flex;
+}
+ul{
+    margin-left: auto;
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    overflow: hidden;
+    margin-right: 1rem;
+    
+}
+ul li{
+    list-style: none;
+}
+ul li a{
+    font-size: 1rem;
+    color: var(--gray);
+    padding: 0;
+    margin: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    outline: none;
+    font-weight: 100;
+}
+ul li a:hover{
+    color: var(--dark);
+    margin-top: .8rem;
+    border-bottom: 2px solid var(--dark);
+}
+
+.info{
+    position: absolute;
+    top:55%;
+    left: 10%;
+    width: 500px;
+    height: 280px;
+    background-color: rgba(75, 75, 77, 0.9);
+    color: var(--gray);
+    padding: 1.5rem 3rem;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    animation: flyTop 1s linear;
+}
+@keyframes flyTop{
+    0%{
+        top: 100%;
+        opacity: 0.2;
+    }
+    100%{
+        top: 55%;
+        opacity: 1;
+    }
+}
+
+/*section 2*/
+
+#partTwo{
+    position: static;
+    margin-top: 20px;
+    height: 100vh;
+    
+}
+#partTwo-info{
+    width: 40%;
+    float: left;
+    max-height: 100vh;
+    overflow: hidden;
+    margin-left: 10%;
+}
+#partTwo-info h1{
+    font-size: 4rem;
+    color: var(--dark);
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+}
+#partTwo-info p{
+    font-size: 1rem;
+    color: var(--dark);
+    line-height: 2rem;
+}
+#partTwo-info p::first-letter{
+    font-size: 2rem;
+    color: var(--dark);
+    font-weight: 700;
+}
+#partTwo #ARImage{
+    position: relative;
+    background: url(images/ARBackground.jpg)center/cover no-repeat;
+    width: 40%;
+    float: right;
+    height: 100%;
+    overflow: hidden;
+    margin-left: 10%;
+}
+#partTwo #ARImage #rightHand {
+    position: absolute;
+    left: 70%;
+    background: url(images/rightHand.png)center/cover no-repeat;
+    width: 100%;
+    height: 100%;
+    animation: mobileMove 4s infinite linear;
+    z-index: 2;
+    overflow: hidden;
+}
+#partTwo #ARImage #backgroundMobile{
+    position: absolute;
+    background: url(images/backgroundMobile.png)center/cover no-repeat;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    animation-delay: 600;
+    animation-name: mobileAppear;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: 1;
+    
+}
+
+
+@keyframes mobileMove {
+    0%{
+        
+    }
+    35%{
+      left: 0%;  
+    }
+    65%{
+      left: 0%;  
+    }
+    100%{
+      left: 70%;  
+    }
+}
+
+@keyframes mobileAppear {
+    0%{
+       opacity: 0;
+    }
+    35%{
+      opacity: 0;  
+    }
+    48%{
+      opacity: 1;  
+    }
+    52%{
+      opacity: 1;  
+    }
+    65%{
+      opacity: 0;   
+    }
+    100%{
+      opacity: 0; 
+    }
+}
+
+/*section 3*/
+
+#partThree{
+    background-color: var(--gray);
+    height: 100vh;
+    width: 100%;
+    z-index: -2;
+}
+#partThree h1{
+    font-size: 4rem;
+    height: 20vh;
+    color: var(--dark);
+    margin-top: 0;
+    padding-top: 60px;
+    margin-left: 10%;
+   
+}
+#partThree #imageTable {
+    position: relative;
+    height: 60vh;
+    width: auto;
+}
+
+#imageOne{
+    position: absolute;
+    height: 27vh;
+    width: 180px;
+    top: 5%;
+    left: 32%;
+    background: url(images/ImageOne.jpg)center/cover no-repeat;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+#imageTwo{
+    position: absolute;
+    height: 27vh;
+    width: 180px;
+    top: 25%;
+    left: 58%;
+    background: url(images/ImageTwo.jpg)center/cover no-repeat;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+#imageThree{
+    position: absolute;
+    height: 27vh;
+    width: 180px;
+    top: 60%;
+    left: 32%;
+    background: url(images/ImageThree.jpg)center/cover no-repeat;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+#imageFour{
+    position: absolute;
+    height: 27vh;
+    width: 180px;
+    top: 80%;
+    left: 58%;
+    background: url(images/ImageFour.jpg)center/cover no-repeat;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+#imageOne::before{
+    content: "";
+    position: absolute;
+    height: 35vh;
+    width: 200px;
+    top: -8%;
+    left: 0%;
+    background: var(--green);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+#imageTwo::before{
+    content: "";
+    position: absolute;
+    height: 35vh;
+    width: 200px;
+    top: -8%;
+    left: 0%;
+    background: var(--red);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+#imageThree::before{
+    content: "";
+    position: absolute;
+    height: 35vh;
+    width: 200px;
+    top: -8%;
+    left: 0%;
+    background: var(--pink);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+#imageFour::before{
+    content: "";
+    position: absolute;
+    height: 35vh;
+    width: 200px;
+    top: -8%;
+    left: 0%;
+    background: var(--yellow);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+#imageOne p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+}
+#imageOne > h1{
+    position: absolute;
+    top: -5%;
+    left: 30%;
+    color: var(--light);
+    display: none;
+}
+#imageOne:hover{
+        background: var(--blue);
+}
+#imageOne:hover p{
+        z-index: 2;
+        position: absolute;
+}
+#imageOne:hover > h1{
+        display: block;
+}
+
+#imageTextOne{
+    position: absolute;
+    width: auto;
+    top: 18%;
+    left: 4%;
+}
+#imageTextOne p::first-letter{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+
+
+
+
+#imageTwo p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+}
+#imageTwo > h1{
+    position: absolute;
+    top: -5%;
+    left: 30%;
+    color: var(--light);
+    display: none;
+}
+#imageTwo:hover{
+        background: var(--blue);
+}
+#imageTwo:hover p{
+        z-index: 2;
+        position: absolute;
+}
+#imageTwo:hover > h1{
+        display: block;
+}
+
+#imageTextTwo{
+    position: absolute;
+    width: auto;
+    top: 43%;
+    left: 80%;
+}
+#imageTextTwo p::first-letter{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+
+
+
+#imageThree p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+}
+#imageThree > h1{
+    position: absolute;
+    top: -5%;
+    left: 30%;
+    color: var(--light);
+    display: none;
+}
+#imageThree:hover{
+        background: var(--blue);
+}
+#imageThree:hover p{
+        z-index: 2;
+        position: absolute;
+}
+#imageThree:hover > h1{
+        display: block;
+}
+
+#imageTextThree{
+    position: absolute;
+    width: auto;
+    top: 75%;
+    left: 4%;
+}
+#imageTextThree p::first-letter{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+
+#imageFour p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+}
+#imageFour > h1{
+    position: absolute;
+    top: -5%;
+    left: 25%;
+    color: var(--light);
+    display: none;
+}
+#imageFour:hover{
+        background: var(--blue);
+}
+#imageFour:hover p{
+        z-index: 2;
+        position: absolute;
+}
+#imageFour:hover > h1{
+        display: block;
+}
+
+#imageTextFour{
+    position: absolute;
+    width: auto;
+    top: 90%;
+    left: 80%;
+}
+#imageTextFour p::first-letter{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:960px){
+    
+    /* part 2 */
+    #partTwo{
+        position: static;
+    }
+    #partTwo-info{
+    width: 80%;
+    display: block;
+    max-height: 100vh;
+    overflow: hidden;
+    margin-left: 10%;
+}
+   #partTwo #ARImage{
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+    margin: 10%; 
+    display: block; 
+}
+   /* part 3 */ 
+    #partThree{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--gray);
+        min-height: 100vh;
+    }
+    #partThree #imageTable {
+    display: grid;
+    background-color: var(--gray);
+    height: 50%;
+    width: 80vh;
+    margin:  0;
+    padding: 0;
+    grid-template-areas:
+    ". . a a . . "
+    ". . a a b b "
+    ". . c c b b "
+    ". . c c d d "
+    ". . . . d d " ;
+    grid-gap: 0;
+}
+    #imageOne{
+        grid-area: a;
+    } 
+    #imageTextOne{
+        position: absolute;
+        top: 25%;
+        left: 5%;
+    }
+    #imageTextTwo{
+        position: absolute;
+        top: 55%;
+        left: 5%;
+    }
+    #imageTextThree{
+        position: absolute;
+        top: 75%;
+        left: 5%;
+    }
+    #imageTextFour{
+        position: absolute;
+        top: 110%;
+        left: 5%;
+    }
+    #imageTwo{
+        grid-area: b;
+    }
+    #imageThree{
+        grid-area: c;
+    }
+    #imageFour{
+        grid-area: d;
+    }
+    
+    #partThree > h1{
+    font-size: 4rem;
+    height: 20vh;
+    color: var(--dark);
+    padding: 20px 0 0 0 ;;
+    display: block;
+    padding: 4rem 0 0 0 ;
+
+    }
+    #partThree p{
+        letter-spacing: -1px;
+    }
+    
+}
+
+@media all and (max-width:768px){
+    
+   /* part 3 */ 
+    #partThree{
+        flex-direction: column;
+        background-color: var(--gray);
+        min-height: 140vh;
+    }
+    #partThree #imageTable {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--gray);
+        min-height: 100vh;
+        margin-bottom: 0rem;
+        padding: 0;
+        top: 0;
+        left: 0;
+        
+}
+    #imageOne{
+        display: block;
+        margin: 0;
+        padding: 0;
+        margin-right: 2rem;
+    } 
+    #imageTextOne{
+        display: block;
+        margin: 0;
+        margin-left: 2rem;
+        padding: 0;
+        top: 12%;
+        left: 0%;
+    }
+    #imageTextTwo{
+        display: block;
+        margin: 0;
+        margin-left: 2rem;
+        padding: 0;
+        top: 42%;
+        left: 0%;
+    }
+    #imageTextThree{
+       display: block;
+        margin: 0;
+        margin-left: 2rem;
+        padding: 0;
+        top: 66%;
+        left: 0%;
+    }
+    #imageTextFour{
+        display: block;
+        margin: 0;
+        margin-left: 2rem;
+        padding: 0;
+        top: 95%;
+        left: 0%;
+    }
+    #imageTwo{
+       display: block;
+        margin: 0;
+        padding: 0;
+        top: 24%;
+        left: 0%;
+        margin-right: 2rem;
+    }
+    #imageThree{
+        display: block;
+        margin: 0;
+        padding: 0;
+        top: 44%;
+        left: 0%;
+        margin-right: 2rem;
+    }
+    #imageFour{
+        display: block;
+        margin: 0;
+        padding: 0;
+        top: 64%;
+        left: 0%;
+        margin-right: 2rem;
+    }
+    
+    #partThree > h1{
+    font-size: 4rem;
+    height: 20vh;
+    color: var(--dark);
+    padding: 20px 0 0 0 ;;
+    display: block;
+    padding: 4rem 0 0 0 ;
+
+    }
+    #partThree p{
+        letter-spacing: -1px;
+    }
+    nav > div > ul{
+        display: block;
+        background-color: var(--blue);
+        overflow: hidden;
+    }
+    nav > div {
+        height: 50px;
+        display: none;
+    }
+    nav > div > ul::before{
+        content: "menu";
+        font-size: 1rem;
+    color: var(--gray);
+    padding: 0;
+    margin: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    outline: none;
+    font-weight: 100;
+    }
+    nav  div ul:hover{
+        overflow: visible;
+        padding: 0;
+        background-color: red;
+    }
+   
+    nav  div ul:hover a{
+        color: var(--light);
+        font-weight: 700;
+        background-color: red;
+        display: block;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
